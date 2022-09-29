@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="stuCollection1" class="com.student.bean.StudentWithCollection"
+		scope="prototype">
+		<constructor-arg value="101"></constructor-arg>
+		<constructor-arg value="Prince"></constructor-arg>
+		<constructor-arg value="10000"></constructor-arg>
+		<constructor-arg>
+			<set>
+				<value>History</value>
+				<value>Science</value>
+				<value>Math</value>
+			</set>
+		</constructor-arg>
+
+	</bean>
+	<bean id="examCollection1" class="com.exam.bean.ExamWithCollection"
+		scope="prototype">
+		<constructor-arg value="1001"></constructor-arg>
+		<constructor-arg value="Java"></constructor-arg>
+		<constructor-arg value="100"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>English</value>
+				<value>Hindi</value>
+				<value>Sanskrit</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="Java" value="100"></entry>
+				<entry key="Python" value="100"></entry>
+				<entry key="PHP" value="100"></entry>
+				<entry key="Ruby" value="100"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+
+</beans>
